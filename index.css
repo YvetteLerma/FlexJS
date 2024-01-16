@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    background: #ffc600;
+    background: #b56beb;
     font-family: 'helvetica neue';
     font-size: 20px;
     font-weight: 200;
@@ -35,6 +35,11 @@ html {
     font-size: 20px;
     background-size: cover;
     background-position: center;
+    flex: 1; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .panel1 { background-image:url("media/picture1.jpg"); }
@@ -47,7 +52,16 @@ html {
     margin: 0;
     width: 100%;
     transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .panel > *:first-child { transform: translateY(-100%); }
+  .panel.open-active > *:first-child { transform: translateY(0); }
+  .panel > *:last-child { transform: translateY(100%); }
+  .panel.open-active > *:last-child { transform: translateY(0); }
 
   .panel p {
     text-transform: uppercase;
