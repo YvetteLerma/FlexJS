@@ -48,6 +48,7 @@ html {
   .panel4 { background-image:url("media/picture4.jpg"); }
   .panel5 { background-image:url("media/picture5.jpg"); }
   /* Flex Children */
+
   .panel > * {
     margin: 0;
     width: 100%;
@@ -76,4 +77,5 @@ html {
 
   .panel.open {
     font-size: 40px;
+    flex: 6;
   }
